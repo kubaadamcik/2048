@@ -1,3 +1,67 @@
 ﻿@inherits LayoutComponentBase
 
-@Body
+<div class="page">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="">
+                    <span class="text-primary">2048</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Domů</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="game">Hrát hru</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="scores">Žebříček</a>
+                        </li>
+                    </ul>
+                    <div class="ms-3 d-flex align-items-center">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userMenuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle me-1"></i> Účet
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenuDropdown">
+                                <li><a class="dropdown-item" href="login">Přihlásit se</a></li>
+                                <li><a class="dropdown-item" href="register">Registrovat</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="profile">Profil</a></li>
+                                <li><a class="dropdown-item" href="stats">Moje statistiky</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0)">Odhlásit se</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-4">
+        <div class="container-fluid">
+            @Body
+        </div>
+    </main>
+</div>
+
+<style>
+    .page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+</style>
